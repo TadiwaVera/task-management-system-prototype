@@ -1,6 +1,7 @@
 # task-management-system-prototype
 This prototype system uses HTML, CSS, and JavaScript on the frontend and Spring Boot with JPA/Hibernate on the backend. It provides full CRUD task management: users can create, view, update, and delete tasks via REST API calls, with data persisted through a simple JPA-configured relational database.
 Tools Used in the Implemented Version
+
 Frontend (Implemented Prototype)
 1. HTML
 Used to structure the web interface, providing the core layout for pages such as the task dashboard, task creation forms, and task listings.
@@ -22,5 +23,6 @@ Used to map Java objects (Task entity) to the database and handle data persisten
 3. Database (JPA-Configured Storage)
 The prototype uses a relational database setup (via JPA).
 Even though future versions will use PostgreSQL + MongoDB, the prototype uses a simpler database configuration suitable for demonstrating CRUD operations.
+
 Current Functionality
 The prototype task management system enables task creation, viewing, updating, and deletion with backend persistence. It supports CRUD operations via REST API endpoints, integrates frontend fetch calls, and uses JPA/Hibernate for lightweight yet functional data storage and retrieval.

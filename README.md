@@ -24,6 +24,7 @@ Used to map Java objects (Task entity) to the database and handle data persisten
 3. Database (JPA-Configured Storage) - 
 The prototype uses a relational database setup (via JPA).
 Even though future versions will use PostgreSQL + MongoDB, the prototype uses a simpler database configuration suitable for demonstrating CRUD operations.
+<img width="1470" height="956" alt="Screenshot 2025-11-23 at 14 31 56" src="https://github.com/user-attachments/assets/8fd3c5c2-f4e1-4f20-a608-df777552e7bc" />
 
 Current Functionality - 
 The prototype task management system enables task creation, viewing, updating, and deletion with backend persistence. It supports CRUD operations via REST API endpoints, integrates frontend fetch calls, and uses JPA/Hibernate for lightweight yet functional data storage and retrieval.

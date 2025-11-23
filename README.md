@@ -14,14 +14,14 @@ Updating the task list without reloading the page
 Handling user actions like creating or deleting tasks
 
 Backend (Implemented Prototype)
-1. Java (Spring Boot)
+1. Java (Spring Boot) - 
 The main backend framework used to build the running prototype. It provides:
 RESTful API endpoints
 Business logic for managing tasks
 Controllers, Services, and Entity mappings
-2. JPA / Hibernate
+2. JPA / Hibernate - 
 Used to map Java objects (Task entity) to the database and handle data persistence.
-3. Database (JPA-Configured Storage)
+3. Database (JPA-Configured Storage) - 
 The prototype uses a relational database setup (via JPA).
 Even though future versions will use PostgreSQL + MongoDB, the prototype uses a simpler database configuration suitable for demonstrating CRUD operations.
 

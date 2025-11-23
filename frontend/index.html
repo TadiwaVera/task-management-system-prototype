@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Left column: Task Creation Section -->
+        <div class="section create">
+            <h1>Task Manager</h1>
+            <form id="task-form">
+                <input id="title" type="text" placeholder="Task title" required />
+                <input id="description" type="text" placeholder="Description" required />
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <div class="section start">
+                <h2>Start</h2>
+                <ul id="tasks-start"></ul>
+            </div>
+
+            <div class="section progress">
+                <h2>In Progress</h2>
+                <ul id="tasks-progress"></ul>
+            </div>
+
+            <div class="section completed">
+                <h2>Completed</h2>
+                <ul id="tasks-completed"></ul>
+            </div>
+        </div>
+
+        <!-- Bottom row:Tasks Overview -->
+        <div class="task-overview">
+            <h2>All Tasks Overview</h2>
+            <table id="tasks-overview">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Participants</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

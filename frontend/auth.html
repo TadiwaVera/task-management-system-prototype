@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Authentication</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth-page" class="container">
+    <h1>User Authentication</h1>
+
+    <h3>Register</h3>
+    <input id="regUser" type="text" placeholder="Username" />
+    <input id="regPass" type="password" placeholder="Password" />
+    <button onclick="register()">Register</button>
+
+    <h3>Login</h3>
+    <input id="loginUser" type="text" placeholder="Username" />
+    <input id="loginPass" type="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+
+    <div id="auth-output"></div>
+  </div>
+
+  <script>
+    async function register() {
+      const res = await fetch("http://localhost:8080/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: document.getElementById("regUser").value,
+          password: document.getElementById("regPass").value
+        }),
+        credentials: "include"
+      });
+      document.getElementById("auth-output").innerText = await res.text();
+    }
+
+    async function login() {
+      const res = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: document.getElementById("loginUser").value,
+          password: document.getElementById("loginPass").value
+        }),
+        credentials: "include"
+      });
+      const text = await res.text();
+      document.getElementById("auth-output").innerText = text;
+
+      if (res.status === 200 && text.includes("Login successful")) {
+        // Change to the dashboard page
+        window.location.href = "dashboard.html";
+      }
+    }
+  </script>
+</body>
+</html>

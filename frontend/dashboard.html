@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Task Creation -->
+    <div class="section create">
+      <h1>Task Manager</h1>
+      <form id="task-form">
+        <input id="title" type="text" placeholder="Task title" required />
+        <input id="description" type="text" placeholder="Description" required />
+        <button type="submit">Add Task</button>
+      </form>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Dashboard Panels -->
+    <div class="dashboard-panels">
+      <div class="section start">
+        <h2>Start</h2>
+        <ul id="tasks-start"></ul>
+      </div>
+      <div class="section progress">
+        <h2>In Progress</h2>
+        <ul id="tasks-progress"></ul>
+      </div>
+      <div class="section completed">
+        <h2>Completed</h2>
+        <ul id="tasks-completed"></ul>
+      </div>
+    </div>
+
+    <!-- Task Overview -->
+    <div class="task-overview">
+      <h2>All Tasks Overview</h2>
+      <table id="tasks-overview">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Participants</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function logout() {
+      // Clear session cookie by calling Spring Security logout
+      fetch("http://localhost:8080/logout", { method: "POST", credentials: "include" })
+        .then(() => window.location.href = "auth.html");
+    }
+  </script>
+</body>
+</html>
